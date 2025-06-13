@@ -1,3 +1,4 @@
+// lib/firebaseAdmin.js
 const admin = require("firebase-admin");
 
 if (!admin.apps.length) {
@@ -8,7 +9,7 @@ if (!admin.apps.length) {
       privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
     }),
   });
-  console.log("Firebase Admin SDK initialized successfully");
+  console.log("Firebase Admin SDK initialized");
 }
 
 const db = admin.firestore();
